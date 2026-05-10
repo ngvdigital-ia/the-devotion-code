@@ -567,6 +567,11 @@
 
       // Teste manual via console
       window.__revealPitch=function(){ revealPostPitch('manual'); };
+
+      // Preview mode: ?preview=1 revela tudo imediatamente (avaliacao de copy)
+      if (location.search.indexOf('preview=1') > -1) {
+        revealPostPitch('preview-query');
+      }
     })();
   </script>
 
