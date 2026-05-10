@@ -469,14 +469,12 @@
        ================================================================ -->
   <script>
     (function(){
-      // Seletores amplos de botão CTA/compra do VTurb
+      // Seletores ESTRITOS do VTurb smartplayer fixed-button (evita falso-positivo
+      // com CTAs do proprio post-pitch que ja existem no DOM mas estao hidden)
       var CTA_SELECTORS = [
-        'button[class*="cta" i]','a[class*="cta" i]',
-        'button[class*="buy" i]','a[class*="buy" i]',
-        'button[class*="offer" i]','a[class*="offer" i]',
-        '[data-action="cta"]','[id*="cta" i]',
-        '[class*="smartplayer-fixed" i]','[class*="fixed-button" i]',
-        'a[href*="checkout"]','a[href*="buy"]','a[href*="pay"]'
+        '[class*="smartplayer-fixed" i]',
+        '[class*="fixed-button" i]',
+        '[id*="smartplayer-fixed" i]'
       ].join(',');
 
       // Todos os nomes de evento VTurb conhecidos
